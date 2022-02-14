@@ -3,12 +3,23 @@ public void setup(){
 }
 public void draw(){
   background(0);
-  myFractal(250,250,5);
+  myFractal(500,500,250);
+  myFractals(500,500,250);
 }
 public void myFractal(int x,int y, int size){
-  fill(255,228,225);
+  noFill();
   circle(x,y,size);
-  if(size<200){
-    myFractal(x-20,y,size+20);
+  if(size>2){
+    myFractal(x+size/2,y,size-50);
+    myFractal(x-size/2,y,size-50);
+  }
+}
+public void myFractals(int x,int y, int size){
+  noFill();
+  fill(255,182,193);
+  circle(x,y,size);
+  if(size>2){
+    myFractal(x,y+size/2,size-50);
+    myFractal(x,y-size/2,size-50);
   }
 }
