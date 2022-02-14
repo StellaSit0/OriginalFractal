@@ -8,7 +8,7 @@ public void draw(){
 }
 public void myFractal(int x,int y, int size){
   noFill();
-  circle(x,y,size);
+  ellipse(x,y,size,size);
   if(size>2){
     myFractal(x+size/2,y,size-50);
     myFractal(x-size/2,y,size-50);
@@ -17,7 +17,7 @@ public void myFractal(int x,int y, int size){
 public void myFractals(int x,int y, int size){
   noFill();
   fill(255,182,193);
-  circle(x,y,size);
+  ellipse(x,y,size,size);
   if(size>2){
     myFractal(x,y+size/2,size-50);
     myFractal(x,y-size/2,size-50);
